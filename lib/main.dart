@@ -6,7 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'bloodpage.dart';
 import 'hospital.dart';
-
+import 'Oxegen.dart';
+import 'Ambulance.dart';
 void main() {
   runApp(HelpApp());
 }
@@ -280,7 +281,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HospitalsListScreen(),
+                          builder: (context) => NearbyHospitalsPage(),
                         ),
                       );
                     },
@@ -295,7 +296,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OxygenServicesScreen(),
+                          builder: (context) => OxygenDetailsScreen(),
                         ),
                       );
                     },
@@ -310,7 +311,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AmbulanceServicesScreen(),
+                          builder: (context) => AmbulanceServicesPage(),
                         ),
                       );
                     },
@@ -501,83 +502,7 @@ class HomeScreen extends StatelessWidget {
 
 // Placeholder screens for other services with improved design
 
-class OxygenServicesScreen extends StatelessWidget {
-  const OxygenServicesScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Oxygen Services')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.air,
-              size: 64,
-              color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Oxygen Supply Services',
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            const SizedBox(height: 12),
-            Text(
-              'Oxygen services data will be displayed here once available.',
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Find Oxygen Suppliers'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class AmbulanceServicesScreen extends StatelessWidget {
-  const AmbulanceServicesScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Ambulance Services')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.emergency,
-              size: 64,
-              color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Emergency Transport',
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            const SizedBox(height: 12),
-            Text(
-              'Ambulance services data will be displayed here once available.',
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 32),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Contact Emergency Services'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class HelplineScreen extends StatelessWidget {
   const HelplineScreen({super.key});

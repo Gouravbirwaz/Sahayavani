@@ -36,6 +36,9 @@ dependencies:
   flutter_svg: ^2.1.0
   google_fonts: ^6.2.1
   flutter_native_splash: ^2.4.6
+  geolocator: ^14.0.0
+  geocoding: ^3.0.0
+  permission_handler: ^12.0.0+1
 
 flutter_native_splash:
     color: "#FFFFFF"  # Background color of the splash screen (white in this case)
